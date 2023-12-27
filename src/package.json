@@ -1,0 +1,45 @@
+{
+  "name": "EDRLab.ThoriumReader",
+  "version": "2.4.0-alpha.1",
+  "description": "Desktop application to read ebooks",
+  "keywords": [
+    "readium",
+    "epub"
+  ],
+  "main": "./main.js",
+  "scripts": {
+    "postinstall": "npm run pinCompromisedColorPackage && npm run electron-build",
+    "pinCompromisedColorPackage": "(npm ls colors || echo \"NPM LS?\") && rimraf node_modules/electron-rebuild/node_modules/colors && rimraf node_modules/dir-compare/node_modules/colors",
+    "pinCompromisedColorPackage_": "find node_modules -maxdepth 100 -type d -name \"colors\" && npm ls colors",
+    "electron-build_": "npm rebuild --runtime=electron --target=27.1.2 --disturl=https://electronjs.org/headers --build-from-source",
+    "electron-build": "electron-rebuild --version=27.1.2 --disturl=https://electronjs.org/headers"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:edrlab/readium-desktop.git"
+  },
+  "author": {
+    "name": "EDRLab",
+    "organization": "EDRLab",
+    "email": "contact@edrlab.org",
+    "url": "http://github.com/edrlab/"
+  },
+  "license": "BSD-3-Clause",
+  "licenses": [
+    {
+      "type": "BSD-3-Clause",
+      "url": "http://opensource.org/licenses/BSD-3-Clause"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/edrlab/readium-desktop/issues"
+  },
+  "homepage": "https://github.com/edrlab/readium-desktop",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+  },
+  "optionalDependencies": {}
+}

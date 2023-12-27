@@ -1,0 +1,192 @@
+name: CI
+on:
+  push:
+    branches: [ develop ]
+    tags-ignore:
+      - '*'
+  pull_request:
+    branches: [ develop ]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  USE_HARD_LINKS: 'false'
+jobs:
+  build:
+#    if: "!contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
+    if: "github.event_name == 'pull_request' || !contains(github.event.head_commit.message, 'skip ci')"
+    # runs-on: ubuntu-latest # / ubuntu-18.04 ... or ubuntu-16.04, ubuntu-20.04
+    # runs-on: macos-latest # / macos-10.15
+    # runs-on: windows-2016 # not window-latest / windows-2019, see https://github.com/edrlab/thorium-reader/issues/1591
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-20.04]
+        include:
+          - os: windows-latest
+            osname: windows
+            packname: win
+            travistag: latest-windows
+          - os: macos-latest
+            osname: osx
+            packname: 'mac:skip-notarize'
+            travistag: latest-osx
+          - os: ubuntu-20.04
+            osname: linux
+            packname: linux
+            travistag: latest-linux
+    env:
+      TRAVIS_OS_NAME_: ${{ matrix.osname }}
+      TRAVIS_TAG: ${{ matrix.travistag }}
+    steps:
+    - run: echo 'TRAVIS_OS_NAME_:' ${{ env.TRAVIS_OS_NAME_ }}
+    #- run: echo 'TRAVIS_TAG=latest-${{ env.TRAVIS_OS_NAME_ }}' | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+    #- run: echo 'TRAVIS_TAG=latest-${{ env.TRAVIS_OS_NAME_ }}' >> $GITHUB_ENV
+    #- run: echo '::set-env name=TRAVIS_TAG::latest-${{ env.TRAVIS_OS_NAME_ }}'
+    - run: echo 'TRAVIS_TAG:' ${{ env.TRAVIS_TAG }}
+    - run: 'echo "GITHUB_RUN_NUMBER: ${{ github.run_number }}"'
+    - run: 'echo "GITHUB_RUN_ID: ${{ github.run_id }}"'
+    - run: 'echo "GITHUB_SHA: ${{ github.sha }}"'
+    - name: Checkout
+      uses: actions/checkout@v3
+    #   with:
+    #     persist-credentials: false
+    # - name: Git config global dump (pre)
+    #   run: 'git config --global --list || echo NO_GIT_GLOBAL_CONFIG || true'
+    #   shell: bash
+    # - name: Git config local dump (pre)
+    #   run: 'git config --list || echo NO_GIT_GLOBAL_CONFIG || true'
+    #   shell: bash
+    # - name: git HTTP authentication instead SSH (NPM >=7) 1
+    #   run: >
+    #     git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+    #   shell: bash
+    # - name: git HTTP authentication instead SSH (NPM >=7) 2
+    #   run: >
+    #     git config --global url."https://github.com".insteadOf ssh://git@github.com
+    #   shell: bash
+    # - name: git HTTP authentication instead SSH (NPM >=7) 3
+    #   run: >
+    #     git config --global url."http://github.com/".insteadOf git@github.com:
+    #   shell: bash
+    # - name: git HTTP authentication instead SSH (NPM >=7) 4
+    #   run: >
+    #     git config --global url."http://".insteadOf git://
+    #   shell: bash
+    - name: Git config global dump (post)
+      run: 'git config --global --list || echo NO_GIT_GLOBAL_CONFIG || true'
+      shell: bash
+    - name: Git config local dump (post)
+      run: 'git config --list || echo NO_GIT_GLOBAL_CONFIG || true'
+      shell: bash
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        #check-latest: true
+    - run: node --version && npm --version
+    - run: npm --global install npm@^9
+    - run: npm --version
+    - run: python --version || echo ok
+    - run: python3 --version || echo ok
+    - run: pip --version || echo ok
+    # PYTHON 3.12 distutils deprecation remediation:
+    #- run: python3 -m pip install packaging || python -m pip install packaging
+    - run: python3 -m pip install setuptools || python -m pip install setuptools
+    # - run: npm --global install asar
+    - name: package patch 1
+      run: node scripts/package-ci-patch.js package.json ${{ github.run_id }} && cat package.json | grep -i VERSION && cat package.json
+      shell: bash
+    - name: package patch 2
+      run: node scripts/package-ci-patch.js src/package.json ${{ github.run_id }} && cat src/package.json | grep -i VERSION && cat src/package.json
+      shell: bash
+    - name: package lock patch
+      run: node scripts/package-lock-patch.js && cat package-lock.json | grep -i divina-player-js
+      shell: bash
+    - run: git --no-pager diff
+    - run: npm cache clean --force
+    - run: npm cache verify
+    - run: cat package-lock.json | grep -i divina-player-js
+    - run: npm ci
+    - run: npm list -g node-gyp || echo ok
+    - run: npm list node-gyp || echo ok
+    - name: PR action (just build)
+      if: ${{ github.event_name == 'pull_request' }}
+      run: npm run build:prod
+      # && npm run test SEE https://github.com/edrlab/thorium-reader/issues/1697
+    - name: non-PR action (build and package)
+      if: ${{ github.event_name != 'pull_request' }}
+      run: npm run package:${{ matrix.packname }}
+    #- run: ls -alsR release
+    #- run: npm install @octokit/rest
+    - name: GitHub Tagged Release Delete/ReCreate and Upload Build Artefacts
+      if: ${{ github.event_name != 'pull_request' }}
+      run: node scripts/release-github.js
+    # - name: Upload Artifact
+    #   if: ${{ github.event_name != 'pull_request' }}
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: Thorium
+    #     path: ./release/*.exe
+    # - name: Delete Release
+    #   if: ${{ github.event_name != 'pull_request' }}
+    #   uses: author/action-rollback@stable
+    #   with:
+    #     tag: $TRAVIS_TAG
+    #     always_delete_tag: true
+    # - name: GitHub Release
+    #   if: ${{ github.event_name != 'pull_request' }}
+    #   id: create_release
+    #   uses: actions/create-release@v1
+    #   with:
+    #     tag_name: $TRAVIS_TAG
+    #     release_name: '[$TRAVIS_TAG] continuous test build (prerelease)'
+    #     body: 'GitHub Action build job: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID'
+    #     draft: false
+    #     prerelease: true
+    # - name: GitHub Release Assets
+    #   if: ${{ github.event_name != 'pull_request' }}
+    #   id: upload-release-asset
+    #   uses: actions/upload-release-asset@v1
+    #   with:
+    #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+    #     asset_path: ./release/*.exe
+    #     asset_name: Thorium.exe
+    #     asset_content_type: application/octet-stream
+    # - name: GitHub Script Release And Assets
+    #   if: ${{ github.event_name != 'pull_request' }}
+    #   env:
+    #     - GH_RELEASE_ID: ${{ steps.create_release.outputs.id }}
+    #   uses: actions/github-script@v2
+    #   with:
+    #     github-token: ${{ secrets.GITHUB_TOKEN }}
+    #     script: |
+    #       console.log('process.versions', process.versions, process.env.GH_RELEASE_ID);
+
+    #       const fs = require('fs').promises;
+
+    #       const { repo: { owner, repo }, sha } = context;
+
+    #       /*
+    #       const release = await github.repos.createRelease({
+    #         name: `[${process.env.TRAVIS_TAG}] continuous test build (prerelease)`,
+    #         body: `GitHub Action build job: ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`,
+    #         owner,
+    #         repo,
+    #         tag_name: process.env.TRAVIS_TAG,
+    #         draft: false,
+    #         prerelease: true,
+    #         target_commitish: sha
+    #       });
+    #       */
+
+    #       for (let file of await fs.readdir('release')) {
+    #         if (!file.endsWith('.exe') || !file.endsWith('.AppImage') || !file.endsWith('.msi') || !file.endsWith('.deb') || !file.endsWith('.dmg')) {
+    #           continue;
+    #         }
+    #         await github.repos.uploadReleaseAsset({
+    #           owner,
+    #           repo,
+    #           release_id: process.env.GH_RELEASE_ID, // release.data.id,
+    #           name: file,
+    #           data: await fs.readFile(`./release/${file}`)
+    #         });
+    #       }

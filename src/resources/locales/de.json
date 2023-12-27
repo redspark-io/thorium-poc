@@ -1,0 +1,439 @@
+{
+    "accessibility": {
+        "bookMenu": "Menü",
+        "closeDialog": "Schließen",
+        "importFile": "Importieren einer EPUB-Datei",
+        "leftSlideButton": "Scrolle nach links unten",
+        "mainContent": "hauptinhalt",
+        "rightSlideButton": "Scrolle nach rechts unten",
+        "searchBook": "Suche nach einem Buch, einem Tag oder einer Art von Literatur",
+        "skipLink": "Gehe zum Inhalt",
+        "toolbar": "symbolleiste"
+    },
+    "apiapp": {
+        "noLibraryFound": ""
+    },
+    "app": {
+        "edit": {
+            "copy": "Kopieren",
+            "cut": "Ausschneiden",
+            "paste": "Einfügen",
+            "redo": "Wiederherstellen",
+            "selectAll": "Alle auswählen",
+            "title": "Bearbeiten",
+            "undo": "Rückgängig"
+        },
+        "hide": "Ausblenden {{- appName}}",
+        "quit": "Beenden {{- appName}}",
+        "session": {
+            "exit": {
+                "askBox": {
+                    "button": {
+                        "no": "Nein",
+                        "yes": "Ja"
+                    },
+                    "message": "Möchten Sie die Sitzung speichern ?",
+                    "title": "Sitzung sichern"
+                }
+            }
+        },
+        "window": {
+            "showLibrary": ""
+        }
+    },
+    "catalog": {
+        "about": {
+            "button": "Mehr Informationen",
+            "title": "Über {{appName}}"
+        },
+        "addBookToLib": "Import",
+        "addTags": "Ein Tag hinzufügen",
+        "addTagsButton": "Hinzufügen",
+        "allBooks": "Alle Bücher",
+        "bookInfo": "Über dieses Buch",
+        "column": {
+            "ascending": "",
+            "descending": "",
+            "unsorted": ""
+        },
+        "delete": "Löschen",
+        "deleteBook": "Löschen",
+        "deleteTag": "Löschen des Tags",
+        "description": "Beschreibung",
+        "emptyTagList": "Es gibt keine Tags in Ihren Büchern.",
+        "entry": {
+            "continueReading": "Lesen Sie weiter",
+            "continueReadingAudioBooks": "Hören Sie weiter zu",
+            "continueReadingDivina": "",
+            "continueReadingPdf": "",
+            "lastAdditions": "Kürzlich hinzugefügt"
+        },
+        "export": "Export",
+        "format": "",
+        "lang": "Sprache",
+        "lastRead": "",
+        "moreInfo": "Mehr Informationen",
+        "myBooks": "Meine Bücher",
+        "noPublicationHelpL1": "Geben Sie die Publikation ab",
+        "noPublicationHelpL2": "oder über den Button \"+\" hinzufügen.",
+        "noPublicationHelpL3": "LCP-geschützte Dateien werden unterstützt.",
+        "noPublicationHelpL4": "Unterstützte Erweiterungen:",
+        "numberOfPages": "Seitenzahl",
+        "opds": {
+            "auth": {
+                "cancel": "Abbrechen",
+                "login": ""
+            },
+            "info": {
+                "availableSince": "Verfügbar seit",
+                "availableState": {
+                    "available": "Verfügbar",
+                    "ready": "Bereit",
+                    "reserved": "Reserviert",
+                    "unavailable": "Nicht verfügbar",
+                    "unknown": "Unbekannte"
+                },
+                "availableUntil": "Verfügbar bis",
+                "copyAvalaible": "Anzahl der verfügbaren",
+                "copyTotal": "Anzahl der Kopien",
+                "holdPosition": "Ihre Halteposition",
+                "holdTotal": "Gehalten",
+                "numberOfItems": "Anzahl der Teile",
+                "priveValue": "Preis",
+                "state": "Zustand"
+            }
+        },
+        "publisher": "Herausgeber",
+        "readBook": "Lesen",
+        "released": "Veröffentlicht am",
+        "sort": "Sortieren nach",
+        "tagCount": "Anzahl der Tags",
+        "tags": "Tags",
+        "update": ""
+    },
+    "dialog": {
+        "cancel": "Abbrechen",
+        "closeModalWindow": "Dieses Fenster schließen",
+        "deleteFeed": "Willst du diesen Katalog wirklich löschen?",
+        "deletePublication": "Willst du diese Publikation wirklich löschen?",
+        "import": "Willst du diese EPUB-Dateien wirklich importieren?",
+        "importError": "Ein Fehler ist aufgetreten, überprüfen Sie die Dateiendung ({{acceptedExtension}})",
+        "renew": "",
+        "return": "",
+        "yes": "Ja"
+    },
+    "error": {
+        "errorBox": {
+            "error": "Fehlermeldung:",
+            "message": "In ist ein Fehler aufgetreten {{- filename}}",
+            "title": "interner {{- appName}} Leser"
+        }
+    },
+    "header": {
+        "allBooks": "Alle Bücher",
+        "books": "Meine Bücher",
+        "catalogs": "Kataloge",
+        "downloads": "Downloads",
+        "gridTitle": "Bücher in einem Raster präsentieren",
+        "home": "Hauptmenü",
+        "homeTitle": "home",
+        "importTitle": "ein Buch importieren",
+        "listTitle": "Bücher in einer Liste präsentieren",
+        "refreshTitle": "Feeds neu laden",
+        "searchPlaceholder": "Suche",
+        "searchTitle": "Suche starten",
+        "settings": "Einstellungen"
+    },
+    "library": {
+        "lcp": {
+            "hint": "Dein Kennwort",
+            "password": "",
+            "sentence": "Diese LCP-geschütze Publikation benötigt zum Öffnen ein Password: ",
+            "submit": "Absenden",
+            "urlHint": ""
+        }
+    },
+    "message": {
+        "download": {
+            "error": "Der Download von {{- title}} ist fehlgeschlagen: [{{- err}}]"
+        },
+        "import": {
+            "alreadyImport": "Der Import von {{- title}} Es scheint, dass Sie diese Publikation bereits in Ihren Katalog aufgenommen haben.",
+            "fail": "Der Import von {{- path}} ist fehlgeschlagen. {{- err}}",
+            "success": "Der Import von {{- title}} ist abgeschlossen."
+        },
+        "open": {
+            "error": "Die Publikation kann nicht geöffnet werden: {{- err}}"
+        }
+    },
+    "opds": {
+        "addForm": {
+            "addButton": "Hinzufügen",
+            "name": "Feed-Name:",
+            "namePlaceholder": "",
+            "title": "Feed hinzufügen",
+            "url": "Feed-Link:",
+            "urlPlaceholder": ""
+        },
+        "addFormApiapp": {
+            "title": ""
+        },
+        "addMenu": "OPDS-Feed hinzufügen",
+        "back": "Zurück",
+        "breadcrumbRoot": "",
+        "empty": "Keine Publikation gefunden",
+        "firstPage": "Zuerst",
+        "lastPage": "Zuletzt",
+        "menu": {
+            "aboutBook": "Über dieses Buch",
+            "addExtract": "Zur Bibliothek hinzufügen",
+            "goBuyBook": "Dieses Buch kaufen",
+            "goLoanBook": "Dieses Buch ausleihen",
+            "goRevokeLoanBook": "",
+            "goSubBook": "Abonnieren"
+        },
+        "network": {
+            "error": "Ein Fehler ist aufgetreten",
+            "noInternet": "Kein Internet",
+            "noInternetMessage": "Versuchen Sie: Überprüfen Sie das Netzwerkkabel, das Modem, den Router oder das WLAN",
+            "reject": "Beim Versuch, den OPDS-Feed zu verarbeiten, ist ein unerwarteter Fehler aufgetreten.",
+            "timeout": "Es ist eine Netzwerk-Zeitüberschreitung aufgetreten. Bitte versuchen Sie es später erneut"
+        },
+        "next": "Nächster",
+        "previous": "Bisherige",
+        "shelf": "",
+        "updateForm": {
+            "name": "",
+            "title": "",
+            "updateButton": "",
+            "url": ""
+        }
+    },
+    "publication": {
+        "accessibility": {
+            "accessModeSufficient": {
+                "textual": ""
+            },
+            "accessibilityFeature": {
+                "alternativeText": "",
+                "displayTransformability": "",
+                "longDescription": "",
+                "printPageNumbers": "",
+                "readingOrder": "",
+                "synchronizedAudioText": "",
+                "tableOfContents": ""
+            },
+            "accessibilityHazard": {
+                "flashing": "",
+                "motionSimulation": "",
+                "name": "",
+                "noFlashing": "",
+                "noMotionSimulation": "",
+                "noSound": "",
+                "none": "",
+                "sound": "",
+                "unknown": ""
+            },
+            "certifierReport": "",
+            "conformsTo": "",
+            "moreInformation": "",
+            "name": "",
+            "noA11y": ""
+        },
+        "audio": {
+            "tracks": "Spuren"
+        },
+        "author": "",
+        "cancelledLcp": "",
+        "certificateRevoked": "",
+        "certificateSignatureInvalid": "",
+        "cover": {
+            "img": "Titelbild"
+        },
+        "duration": {
+            "title": "Dauer"
+        },
+        "expiredLcp": "",
+        "lcpEnd": "",
+        "lcpRightsCopy": "Kopierte Zeichen",
+        "lcpRightsPrint": "Gedruckte Seiten",
+        "lcpStart": "",
+        "licenseOutOfDate": "",
+        "licenseSignatureDateInvalid": "",
+        "licenseSignatureInvalid": "",
+        "progression": {
+            "title": "Fortschreiten"
+        },
+        "renewButton": "Verlängern",
+        "returnButton": "Zurückgeben",
+        "returnedLcp": "",
+        "revokedLcp": "",
+        "seeLess": "Weniger Infos",
+        "seeMore": "Mehr Infos",
+        "title": "",
+        "userKeyCheckInvalid": ""
+    },
+    "reader": {
+        "divina": {
+            "mute": "",
+            "unmute": ""
+        },
+        "footerInfo": {
+            "lessInfo": "Weniger Informationen",
+            "moreInfo": "Mehr Informationen"
+        },
+        "marks": {
+            "annotations": "Meine Anmerkungen",
+            "bookmarks": "Meine Lesezeichen",
+            "delete": "Löschen",
+            "edit": "Bearbeiten",
+            "landmarks": "Navigationspunkte",
+            "search": "",
+            "toc": "Inhaltsverzeichnis"
+        },
+        "media-overlays": {
+            "activate": "",
+            "captions": "",
+            "next": "",
+            "pause": "",
+            "play": "",
+            "previous": "",
+            "skip": "",
+            "speed": "",
+            "stop": "",
+            "title": ""
+        },
+        "navigation": {
+            "backHomeTitle": "Zurück zum Bücherregal",
+            "bookmarkTitle": "Lesezeichen setzen",
+            "currentPage": "",
+            "currentPageTotal": "",
+            "detachWindowTitle": "Fenster loslösen",
+            "fullscreenTitle": "Vollbildmodus",
+            "goTo": "Gehe zu",
+            "goToError": "Diese Seite existiert nicht",
+            "goToPlaceHolder": "Gehe zur Seite",
+            "goToTitle": "Gehe zur Seite",
+            "historyNext": "",
+            "historyPrevious": "",
+            "infoTitle": "Informationen",
+            "magnifyingGlassButton": "",
+            "openTableOfContentsTitle": "Navigation",
+            "pdfscalemode": "",
+            "quitFullscreenTitle": "Vollbildmodus beenden",
+            "readBookTitle": "Mit dem Lesen des Buches beginnen",
+            "settingsTitle": "Einstellungen"
+        },
+        "picker": {
+            "annotationTitle": "",
+            "search": {
+                "founds": "",
+                "input": "",
+                "next": "",
+                "notFound": "",
+                "previous": "",
+                "submit": ""
+            },
+            "searchTitle": ""
+        },
+        "settings": {
+            "column": {
+                "auto": "Automatisch",
+                "one": "1 Spalte",
+                "oneTitle": "1 Spalte",
+                "title": "Spaltendarstellung",
+                "two": "2 Spalten",
+                "twoTitle": "2 Spalten"
+            },
+            "display": "Lesefluss",
+            "disposition": {
+                "title": ""
+            },
+            "font": "Schriftart",
+            "fontSize": "Schriftgröße:",
+            "justification": "Textausrichtung",
+            "justify": "Blocksatz",
+            "letterSpacing": "Buchstabenabstand",
+            "lineSpacing": "Zeilenabstand",
+            "margin": "Seitenränder",
+            "noFootnotes": "",
+            "paginated": "Seitendarstellung",
+            "paraSpacing": "",
+            "pdfZoom": {
+                "name": {
+                    "100pct": "",
+                    "150pct": "",
+                    "200pct": "",
+                    "300pct": "",
+                    "500pct": "",
+                    "50pct": "",
+                    "fit": "",
+                    "width": ""
+                },
+                "title": ""
+            },
+            "reduceMotion": "",
+            "save": {
+                "apply": "Speichern",
+                "reset": "Zurücksetzen",
+                "title": "Aufbau"
+            },
+            "scrolled": "Fortlaufend",
+            "spacing": "Abstand",
+            "text": "Text",
+            "theme": {
+                "name": {
+                    "Neutral": "Neutral",
+                    "Night": "Nachtzeit",
+                    "Sepia": "Sepia"
+                },
+                "title": "Motiv"
+            },
+            "wordSpacing": "Wortabstand"
+        },
+        "svg": {
+            "left": "",
+            "right": ""
+        },
+        "toc": {
+            "publicationNoToc": ""
+        },
+        "tts": {
+            "activate": "",
+            "default": "",
+            "next": "",
+            "pause": "",
+            "play": "",
+            "previous": "",
+            "sentenceDetect": "",
+            "speed": "",
+            "stop": "",
+            "voice": ""
+        }
+    },
+    "settings": {
+        "auth": {
+            "wipeData": ""
+        },
+        "keyboard": {
+            "advancedMenu": "Menü",
+            "cancel": "Stornieren",
+            "edit": "Bearbeiten",
+            "editUserJson": "Benutzerdatei bearbeiten ...",
+            "hide": "Ausblenden",
+            "keyboardShortcuts": "Tastatürkürzel",
+            "loadUserJson": "Aus Benutzerdatei laden",
+            "resetDefaults": "Zurücksetzen (standard)",
+            "save": "Speichern",
+            "show": "Anzeigen"
+        },
+        "language": {
+            "languageChoice": "Sprachauswahl"
+        },
+        "session": {
+            "no": "Deaktivieren",
+            "title": "Sitzung speichern",
+            "yes": "aktivieren"
+        }
+    }
+}

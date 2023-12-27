@@ -1,0 +1,439 @@
+{
+    "accessibility": {
+        "bookMenu": "Menu",
+        "closeDialog": "Chiudi",
+        "importFile": "Importa una pubblicazione",
+        "leftSlideButton": "Scorri la lista a sinistra",
+        "mainContent": "contenuto principale",
+        "rightSlideButton": "Scorri la lista a destra",
+        "searchBook": "Ricerca per titolo",
+        "skipLink": "Salta al contenuto",
+        "toolbar": "barra degli strumenti"
+    },
+    "apiapp": {
+        "noLibraryFound": "Nessuna libreria trovata ({{- name}})"
+    },
+    "app": {
+        "edit": {
+            "copy": "Copia",
+            "cut": "Taglia",
+            "paste": "Incolla",
+            "redo": "Ripeti",
+            "selectAll": "Seleziona tutto",
+            "title": "Modifica",
+            "undo": "Annulla"
+        },
+        "hide": "Nascondi {{- appName}}",
+        "quit": "Esci da {{- appName}}",
+        "session": {
+            "exit": {
+                "askBox": {
+                    "button": {
+                        "no": "No",
+                        "yes": "Sì"
+                    },
+                    "message": "Vuoi salvare la sessione ?",
+                    "title": "Salva la sessione"
+                }
+            }
+        },
+        "window": {
+            "showLibrary": "Mostra libreria"
+        }
+    },
+    "catalog": {
+        "about": {
+            "button": "Più informazioni",
+            "title": "Informazioni su {{- appName}}"
+        },
+        "addBookToLib": "Importa",
+        "addTags": "Aggiungi un tag",
+        "addTagsButton": "Aggiungi",
+        "allBooks": "Tutti i libri",
+        "bookInfo": "Informazioni su questo libro",
+        "column": {
+            "ascending": "ascendente",
+            "descending": "discendente",
+            "unsorted": "non ordinata"
+        },
+        "delete": "Elimina",
+        "deleteBook": "Elimina",
+        "deleteTag": "Elimina la tag",
+        "description": "Descrizione",
+        "emptyTagList": "Non hai nessuna pubblicazione taggata.",
+        "entry": {
+            "continueReading": "Continua a leggere",
+            "continueReadingAudioBooks": "Continua ad ascoltare",
+            "continueReadingDivina": "Continua a leggere divina",
+            "continueReadingPdf": "Continua a leggere Pdf",
+            "lastAdditions": "Aggiunti di recente"
+        },
+        "export": "Esporta",
+        "format": "Formato",
+        "lang": "Lingua",
+        "lastRead": "Ultimi letti",
+        "moreInfo": "Più info",
+        "myBooks": "I miei libri",
+        "noPublicationHelpL1": "Rilascia una pubblicazione qui",
+        "noPublicationHelpL2": "o utilizza il bottone \"+\" sopra.",
+        "noPublicationHelpL3": "Files protetti da LCP sono supportati.",
+        "noPublicationHelpL4": "Estensioni supportate:",
+        "numberOfPages": "Numero di pagine",
+        "opds": {
+            "auth": {
+                "cancel": "Annulla",
+                "login": "Login"
+            },
+            "info": {
+                "availableSince": "Da",
+                "availableState": {
+                    "available": "Disponibile",
+                    "ready": "Pronto",
+                    "reserved": "Prenotato",
+                    "unavailable": "Non disponibile",
+                    "unknown": "Sconosciuto"
+                },
+                "availableUntil": "Fino a",
+                "copyAvalaible": "Numero di copie disponibili",
+                "copyTotal": "Numero di copie",
+                "holdPosition": "La tua posizione di attesa",
+                "holdTotal": "Riservati",
+                "numberOfItems": "Numero di elementi",
+                "priveValue": "Prezzo",
+                "state": "Stato"
+            }
+        },
+        "publisher": "Editore",
+        "readBook": "Leggi",
+        "released": "Pubblicato il",
+        "sort": "Ordina per",
+        "tagCount": "Contatore Tag",
+        "tags": "Tags",
+        "update": "Modifica"
+    },
+    "dialog": {
+        "cancel": "Annulla",
+        "closeModalWindow": "Chiudi questa finestra modale",
+        "deleteFeed": "Vuoi davvero eliminare questo catalogo ?",
+        "deletePublication": "Vuoi davvero eliminare questa pubblicazione ?",
+        "import": "Vuoi davvero importare questi files:",
+        "importError": "si è verificato un errore, verifica l'estensione del file ({{acceptedExtension}})",
+        "renew": "Vuoi davvero rinnovare la licenza per questa pubblicazione?",
+        "return": "Vuoi davvero restituire la licenza per questa pubblicazione?",
+        "yes": "Sì"
+    },
+    "error": {
+        "errorBox": {
+            "error": "Messaggio di errore:",
+            "message": "Si è verificato un errore in {{- filename}}",
+            "title": "Errore interno {{- appName}}"
+        }
+    },
+    "header": {
+        "allBooks": "Tutti i libri",
+        "books": "I miei libri",
+        "catalogs": "Cataloghi",
+        "downloads": "Downloads",
+        "gridTitle": "Vista a griglia",
+        "home": "Menu libreria",
+        "homeTitle": "Home",
+        "importTitle": "Importa una pubblicazione",
+        "listTitle": "Vista a lista",
+        "refreshTitle": "Ricarica",
+        "searchPlaceholder": "Cerca",
+        "searchTitle": "Inizia una ricerca",
+        "settings": "Impostazioni"
+    },
+    "library": {
+        "lcp": {
+            "hint": "(Suggerimento : {{- hint}})",
+            "password": "Passphrase",
+            "sentence": "Questa pubblicazione ha bisogno di una passphrase LCP per essere aperta: ",
+            "submit": "Invia",
+            "urlHint": "Hai dimenticato la tua passphrase? Ottieni un aiuto qui"
+        }
+    },
+    "message": {
+        "download": {
+            "error": "Il download di {{- title}} è fallito: [{{- err}}]"
+        },
+        "import": {
+            "alreadyImport": "{{- title}} è già stato importato",
+            "fail": "L'importazione di {{- path}} è fallita. {{- err}}",
+            "success": "L'importazione di {{- title}} è terminata."
+        },
+        "open": {
+            "error": "La pubblicazione non può essere aperta : {{- err}}"
+        }
+    },
+    "opds": {
+        "addForm": {
+            "addButton": "Aggiungi",
+            "name": "Nome :",
+            "namePlaceholder": "Nome",
+            "title": "Aggiungi un feed OPDS",
+            "url": "Link :",
+            "urlPlaceholder": "Link"
+        },
+        "addFormApiapp": {
+            "title": "Aggiungi un account libreria"
+        },
+        "addMenu": "Aggiungi feed OPDS",
+        "back": "Indietro",
+        "breadcrumbRoot": "Cataloghi",
+        "empty": "Nessuna pubblicazione trovata",
+        "firstPage": "Prima",
+        "lastPage": "Ultima",
+        "menu": {
+            "aboutBook": "Informazioni su questo libro",
+            "addExtract": "Importa l'estratto",
+            "goBuyBook": "Compra questo libro",
+            "goLoanBook": "Richiedi questo libro in prestito",
+            "goRevokeLoanBook": "Revoca il prestito",
+            "goSubBook": "Iscriviti"
+        },
+        "network": {
+            "error": "Impossibile accedere al feed OPDS",
+            "noInternet": "Nessuna connessione",
+            "noInternetMessage": "Riprova : Controlla il cavo di connessione, il modem, il router o il wifi ",
+            "reject": "Spiacente, si è verificato un errore inatteso durante l'elaborazione del feed OPDS.",
+            "timeout": "Si è verificato un timeout del network, per favore riprova più tardi."
+        },
+        "next": "Prossimo",
+        "previous": "Precedente",
+        "shelf": "Mensola",
+        "updateForm": {
+            "name": "Nome:",
+            "title": "Modifica un feed OPDS",
+            "updateButton": "Modifica",
+            "url": "Link"
+        }
+    },
+    "publication": {
+        "accessibility": {
+            "accessModeSufficient": {
+                "textual": "Supporta TTS e lettori di schermo"
+            },
+            "accessibilityFeature": {
+                "alternativeText": "Contiene testo alternativo",
+                "displayTransformability": "Testo e layout adattabile",
+                "longDescription": "Risorse grafiche completamente descritte",
+                "printPageNumbers": "Riferimento alla paginazione della versione stampata del libro",
+                "readingOrder": "Contiene un ordine di lettura",
+                "synchronizedAudioText": "Testo & audio sincronizzato",
+                "tableOfContents": "Contiene una tabella di navigazione"
+            },
+            "accessibilityHazard": {
+                "flashing": "Flashing",
+                "motionSimulation": "",
+                "name": "Rischi:",
+                "noFlashing": "Non è presente flashing",
+                "noMotionSimulation": "Nessuna simulazione di movimento",
+                "noSound": "Nessun suono",
+                "none": "Nessuno",
+                "sound": "Suono",
+                "unknown": "Sconosciuto"
+            },
+            "certifierReport": "Report del certificatore",
+            "conformsTo": "Conforme a:",
+            "moreInformation": "Più informazioni",
+            "name": "Accessibilità",
+            "noA11y": "Nessuna informazione disponibile sull'accessibilità"
+        },
+        "audio": {
+            "tracks": "Tracce"
+        },
+        "author": "Autore",
+        "cancelledLcp": "Questo libro non può essere letto perchè la licenza LCP è stata annullata.",
+        "certificateRevoked": "Il certificato è revocato.",
+        "certificateSignatureInvalid": "La firma del certificato non è valida.",
+        "cover": {
+            "img": "Immagine di copertina"
+        },
+        "duration": {
+            "title": "Durata"
+        },
+        "expiredLcp": "Questo libro non può essere letto perchè la licenza LCP è scaduta.",
+        "lcpEnd": "Fine",
+        "lcpRightsCopy": "Caratteri copiati",
+        "lcpRightsPrint": "Pagine stampate",
+        "lcpStart": "Inizio",
+        "licenseOutOfDate": "La licenza è scaduta",
+        "licenseSignatureDateInvalid": "La data della firma della licenza non è valida",
+        "licenseSignatureInvalid": "La firma della licenza non è valida",
+        "progression": {
+            "title": "Progressione"
+        },
+        "renewButton": "Rinnova",
+        "returnButton": "Restituisci",
+        "returnedLcp": "Questo libro non può essere letto perchè la licenza LCP è stata restituita",
+        "revokedLcp": "Questo libro non può essere letto perchè la licenza LCP è stata revocata",
+        "seeLess": "Vedi di meno",
+        "seeMore": "Vedi di più",
+        "title": "Titolo",
+        "userKeyCheckInvalid": "La passphrase non è corretta"
+    },
+    "reader": {
+        "divina": {
+            "mute": "disattiva audio",
+            "unmute": "riattiva audio"
+        },
+        "footerInfo": {
+            "lessInfo": "meno informazioni",
+            "moreInfo": "più informazioni"
+        },
+        "marks": {
+            "annotations": "Annotazioni",
+            "bookmarks": "Segnalibri",
+            "delete": "Elimina",
+            "edit": "Modifica",
+            "landmarks": "Punti di riferimento",
+            "search": "Ricerca",
+            "toc": "Tabella dei contenuti"
+        },
+        "media-overlays": {
+            "activate": "Attiva la lettura ad alta voce",
+            "captions": "Testo sincronizzato",
+            "next": "Prossima lettura ad alta voce",
+            "pause": "Metti in pausa la lettura ad alta voce",
+            "play": "Riproduci la lettura ad alta voce",
+            "previous": "Precedente lettura ad alta voce",
+            "skip": "Ometti informazioni ausiliari",
+            "speed": "Velocità di riproduzione per la lettura ad alta voce",
+            "stop": "Interrompi la lettura ad alta voce",
+            "title": "lettura ad alta voce"
+        },
+        "navigation": {
+            "backHomeTitle": "ritorna alla libreria",
+            "bookmarkTitle": "segnalibro",
+            "currentPage": "Pagina attuale: {{- current}}",
+            "currentPageTotal": "Pagina attuale: {{- current}}/{{- total}}",
+            "detachWindowTitle": "Separa la finestra",
+            "fullscreenTitle": "attiva modalità schermo intero",
+            "goTo": "Vai a",
+            "goToError": "Questa interruzione di pagina non esiste",
+            "goToPlaceHolder": "Inserisci il numero della pagina",
+            "goToTitle": "Vai alla pagina",
+            "historyNext": "Vai avanti",
+            "historyPrevious": "Torna indietro",
+            "infoTitle": "informazione",
+            "magnifyingGlassButton": "cerca nella pubblicazione",
+            "openTableOfContentsTitle": "navigazione",
+            "pdfscalemode": "Dimensioni della pagina o larghezza",
+            "quitFullscreenTitle": "esci dalla modalità schermo intero",
+            "readBookTitle": "inizia a leggere il libro",
+            "settingsTitle": "impostazioni"
+        },
+        "picker": {
+            "annotationTitle": "Annotazioni",
+            "search": {
+                "founds": "{{- nResults}} risultato/i",
+                "input": "testo ta cercare",
+                "next": "Prossimo",
+                "notFound": "Nessun risultato",
+                "previous": "Precedente",
+                "submit": "Trova"
+            },
+            "searchTitle": "Cerca:"
+        },
+        "settings": {
+            "column": {
+                "auto": "Automatico",
+                "one": "1 col",
+                "oneTitle": "una colonna",
+                "title": "Colonne",
+                "two": "2 cols",
+                "twoTitle": "due colonne"
+            },
+            "display": "Visualizzazione",
+            "disposition": {
+                "title": "Layout"
+            },
+            "font": "Font",
+            "fontSize": "Dimensioni del font",
+            "justification": "Allineamento",
+            "justify": "Giustifica",
+            "letterSpacing": "Spaziatura lettere",
+            "lineSpacing": "Spaziatura linee",
+            "margin": "Margine",
+            "noFootnotes": "Disattiva note a piè di pagina",
+            "paginated": "Impaginato",
+            "paraSpacing": "Spaziatura paragrafo",
+            "pdfZoom": {
+                "name": {
+                    "100pct": "100%",
+                    "150pct": "150%",
+                    "200pct": "200%",
+                    "300pct": "300%",
+                    "500pct": "500%",
+                    "50pct": "50%",
+                    "fit": "adatta alla pagina",
+                    "width": "larghezza pagina"
+                },
+                "title": "Zoom"
+            },
+            "reduceMotion": "Riduci movimento",
+            "save": {
+                "apply": "salva",
+                "reset": "ripristina",
+                "title": "Configurazione"
+            },
+            "scrolled": "Scrollabile",
+            "spacing": "Spaziatura",
+            "text": "Testo",
+            "theme": {
+                "name": {
+                    "Neutral": "Neutrale",
+                    "Night": "Notte",
+                    "Sepia": "Seppia"
+                },
+                "title": "Tema"
+            },
+            "wordSpacing": "Spaziatura parole"
+        },
+        "svg": {
+            "left": "Sinistra",
+            "right": "Destra"
+        },
+        "toc": {
+            "publicationNoToc": "Questa pubblicazione non ha una tabella di navigazione"
+        },
+        "tts": {
+            "activate": "Attiva Testo a Voce",
+            "default": "Voce: default di sistema",
+            "next": "Prossimo Testo a Voce",
+            "pause": "Metti in pausa Testo a Voce",
+            "play": "Riproduci Testo a Voce",
+            "previous": "Precedente Testo a Voce",
+            "sentenceDetect": "Separa testo",
+            "speed": "Velocità di riproduzione Testo a Voce",
+            "stop": "Interrompi Testo a Voce",
+            "voice": "Voce del Testo a voce"
+        }
+    },
+    "settings": {
+        "auth": {
+            "wipeData": "Elimina dati di autenticazione"
+        },
+        "keyboard": {
+            "advancedMenu": "Menu",
+            "cancel": "Annulla",
+            "edit": "Modifica",
+            "editUserJson": "Modifica il file utente...",
+            "hide": "Nascondi",
+            "keyboardShortcuts": "Scorciatoie da tastiera",
+            "loadUserJson": "Carica da file utente",
+            "resetDefaults": "Ripristina (carica predefiniti)",
+            "save": "Salva",
+            "show": "Mostra"
+        },
+        "language": {
+            "languageChoice": "Scelta della lingua"
+        },
+        "session": {
+            "no": "Disabilita",
+            "title": "Salva sessione",
+            "yes": "Abilita"
+        }
+    }
+}
